@@ -1,0 +1,119 @@
+.info-cards-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+  
+    border-radius: 20px;
+
+}
+.card p{
+    text-align: left;
+    color: #bdbdbd;
+
+}
+.info-card {
+    flex: 1;
+    margin: 0 100px; /* Espacio entre tarjetas */
+    
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(70, 70, 70, 0.2); /* Fondo semi-transparente */
+    backdrop-filter: blur(2px); /* Aplica desenfoque */
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+}
+
+.info-card-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre icono y texto */
+    color: #fff;
+    font-size: 1rem;
+}
+
+.info-card-icon {
+    width: 80px; /* Ajusta el tamaño de los iconos */
+    height: auto;
+}
+
+.info-card-content p {
+    font-family: 'OpenSans-Medium';
+    
+    align-items: center;
+    max-width:200px;
+    margin: 10px 30px;
+    
+}
+
+.info-card-content strong {
+    color: #f1c40f; /* Color amarillo para el texto destacado */
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+    .info-cards-section {
+        flex-direction: column; /* Disposición vertical en pantallas pequeñas */
+        padding: 20px;
+    }
+
+    .info-card {
+        margin: 10px 0; /* Espacio entre tarjetas en vertical */
+        padding: 20px;
+        z-index: 2;
+    }
+
+    .info-card-content {
+        flex-direction: column; /* Disposición vertical del contenido en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .info-card-icon {
+        width: 70px; /* Tamaño de iconos más grande en dispositivos móviles */
+        margin-bottom: 10px;
+    }
+
+    .info-card-content p {
+        font-size: 1.1rem; /* Tamaño de texto más grande en dispositivos móviles */
+    }
+}
+
+@media (max-width:500px){
+    .info-card{
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+    
+    .requirement{
+        margin-top: 20px;
+    }
+    .pricing-section{
+        padding-top: 0px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+@media (max-width:390px){
+    .info-card{
+        margin-top: 200px;
+    }
+    .subscribe-img{
+        width: 130px;
+    }
+    .requirement{
+        margin-top: 20px;
+    }
+}
+@media (max-width:376px){
+    .info-card{
+        margin-top: 0px;
+    }
+   
+}
+

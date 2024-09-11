@@ -1,0 +1,154 @@
+ 
+:root {
+  --swiper-pagination-color: #f1c40f; /* Cambia este color al que prefieras */
+}
+/* Nueva clase testimonial-container */
+.testimonial-container {
+  margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .testimonial-container h3 {
+    font-family: 'LeagueSpartan', sans-serif;
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+ z-index: 3;
+    text-align: left; /* Alinea el texto a la izquierda */
+    width: fit-content; /* Ajusta el ancho al contenido del texto */
+    margin: 0 auto 30px auto; /* Centra el h3 dentro del contenedor */
+    margin-bottom: -100px;
+  }
+  .testimonial {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  
+  .testimonial .image {
+    margin-bottom: -80px;
+    opacity: 0.3;
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .testimonial .slide {
+    background-color: rgba(70, 70, 70, 0.2);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .slide p {
+    text-align: center;
+    padding: 50px 80px 0px 80px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+
+
+  .details {
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos estén en extremos opuestos */
+    align-items: center;
+    gap: 200px;
+    margin-top: 20px; /* Espacio entre el texto y los detalles */
+    padding: 0 10px; /* Aumenta el espacio interior para separar los elementos */
+  }
+  
+  .name {
+    font-weight: bold;
+    color: #f1c40f;
+    font-size: 1rem; /* Tamaño de la fuente del nombre */
+    margin-right: auto; /* Asegura que el nombre se quede en su extremo izquierdo */
+  }
+  
+  .discord-button2 {
+    width: 150px; /* Ajusta el tamaño del botón */
+    height: auto;
+    cursor: pointer; /* Hace que el botón sea clickeable */
+    margin-left: auto; /* Asegura que el botón se quede en su extremo derecho */
+   
+}
+.discord-button2:hover {
+    content: url('../Botones/CWG_Discord_\ Encendido.png'); /* Change to hover image */
+   
+}
+ 
+  /* swiper button css */
+  .nav-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateY(30px);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+  }
+  
+  .nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-btn::after,
+  .nav-btn::before {
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #4070f4;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .details{
+      gap: 80px;
+    }
+    .slide p {
+      padding: 20px 40px 0px 40px;
+    }
+    .nav-btn {
+      display: none;
+    }
+
+    
+  }
+  @media (max-width:431px){
+    .testimonial-container{
+      margin-top:-50px;
+    }
+  }
+  @media (max-width:415px){
+    .testimonial{
+      margin-top: 80px; 
+    }
+  }
+
+
+  @media (max-width:376px){
+    .testimonial-container{
+      margin-top:150px;
+    }
+  }

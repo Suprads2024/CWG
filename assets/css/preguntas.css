@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('assets/Font/LeagueSpartan-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*----Preguntas frecuentes------ */
+.section-preguntas {
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    margin: 0 auto;
+    padding-top:200px; /* Ajusta el padding superior */
+  
+}
+header nav ul li a {
+    font-family: 'LeagueSpartan', sans-serif;
+    font-size: 1vw;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+}
+
+@media (max-width: 786px) {
+    .section-preguntas {
+        padding-top: 150px; /* Ajuste para pantallas más pequeñas */
+    }
+
+   
+}
+
+.highlighted-text5 {
+    font-family: 'OpenSans-ExtraBold';
+    font-size: 2.5rem; /* Aumenta el tamaño de fuente */
+    letter-spacing: 0px;
+    font-weight: 700;
+    color: #00bfa6; /* Color de texto verde */
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+@media (max-width:786px){
+    .highlighted-text5{
+        font-size: 1.7rem;
+    }
+}
+
+.centered-title {
+    font-family: 'OpenSans-ExtraBold';
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+   
+  
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo de pregunta con transparencia */
+    border: 2px solid #585858; /* Borde inicialmente transparente */
+    border-radius: 20px; /* Bordes redondeados */
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    border-color: #00bfa6; /* Cambia el borde a verde al hacer hover */
+}
+
+.faq-question.active {
+    border-color: #00bfa6; /* Cambia el borde a verde cuando está activa */
+    background-color: rgba(0, 191, 166, 0.1); /* Fondo verde claro cuando está activa */
+}
+
+.faq-question p {
+    font-family: 'OpenSans-Medium';
+    font-weight: 700;
+    
+    color: #fff;
+    margin-left: 10px;
+    flex: 1;
+}
+
+.faq-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent; /* Fondo transparente inicialmente */
+    color: #00bfa6; /* Color del ícono */
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.faq-question.active .faq-icon {
+    background-color: #00bfa6; /* Fondo verde cuando está activa */
+    color: #000; /* Color negro cuando está activa */
+}
+
+.faq-answer {
+    display: none;
+    background-color: transparent; /* Fondo transparente */
+    padding: 15px 20px;
+    color: #b3b3b3; /* Color de texto gris claro */
+    border: 3px solid #00bfa6; /* Borde izquierdo verde */
+    margin-bottom: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.faq-answer p {
+   
+    margin-left: 10px;
+}
+
+hr {
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde gris claro */
+}
+
+/*----FIN de Preguntas frecuentes------ */

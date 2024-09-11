@@ -1,0 +1,83 @@
+.bnk-a {
+    margin-top: 80px; /* Disminuir el margen superior para ajustarse mejor */
+    min-height: 100vh; /* Asegurar que la sección cubra al menos toda la altura de la ventana */
+}
+
+.trofeo-a {
+    display: flex;
+    justify-content: space-between; /* Ajusta espacio entre elementos */
+    align-items: flex-start; /* Alinea elementos al inicio para evitar desplazamiento hacia abajo */
+    flex-wrap: wrap;
+    height: auto; /* Ajusta automáticamente la altura según el contenido */
+}
+
+.lf-a img {
+    margin-left: 100px;
+    width: 100%;
+    max-width: 300px; /* Ajuste el tamaño de la imagen según el nuevo diseño */
+    max-height: 400px;
+}
+
+.lf3-a {
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.rol-a {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px; /* Reducir el margen inferior para compactar los puntos */
+}
+
+.contact-background-a {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px; /* Reducir el ancho para que los elementos se ajusten mejor */
+}
+
+.background-text-container-a {
+    text-align: center;
+    position: absolute;
+    left: 20%;
+    transform: translate(-50%, -1%);
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-section-a {
+    width: 270px; /* Ajustar ancho para mantener espacio suficiente a la izquierda y derecha */
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    border: 0.4px solid rgba(255, 255, 255, 0.1);
+    border-width: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.contact-form-a {
+    padding: 10%;
+    border-radius: 30px;
+    margin: 3%;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .contact-section-a {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .background-text-a p {
+        font-size: 4vw;
+    }
+}

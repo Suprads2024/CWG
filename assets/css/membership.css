@@ -1,0 +1,136 @@
+/* Estilos generales */
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('../Font/LeagueSpartan-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../Font/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../Font/OpenSans-Light') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.fondo {
+    background-image: url('../images/web\ landing\ CWG\ Legales\ Fondo.jpg');
+}
+
+/* Espacio debajo del header */
+.form-container {
+    margin-top: 200px; /* Ajusta la distancia del header */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para el iframe */
+.iframe-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 2400px; /* Ajusta la altura para que el formulario ocupe el largo necesario */
+    border: none;
+}
+
+/* Estilos de botones y texto en blanco */
+.nav a, .menu-trigger span {
+    color: white;
+}
+
+.nav a:hover, .menu-trigger span:hover {
+    color: #ccc; /* Color cuando se hace hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    iframe{
+        height:3000px;
+    }
+    .form-container {
+        margin-top: 150px; 
+        padding: 0 30px;
+    }
+    .iframe-container iframe {
+        height: 100%;
+        width: 100%;
+        min-width: 300px;
+        max-width: 100%;
+    }
+    .text-res {
+        padding: 0 15px;
+    }
+}
+
+.text-res {
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.text-res h1 {
+    margin-top: 50px;
+    font-family: 'LeagueSpartan';
+    text-align: left;
+
+    width: 100%;
+}
+
+.text-res h3 {
+    font-family: 'OpenSans-Bold';
+    text-align: left;
+    margin-top: 40px;
+    padding-top: 85px;
+    width: 100%;
+}
+
+.text-res p {
+    font-family: 'OpenSans-Light', sans-serif;
+    hyphens: auto; /* Permite la inserción automática de guiones largos */
+    text-align: justify; /* Justifica el texto para ocupar todo el ancho */
+    word-wrap: break-word; /* Rompe las palabras cuando es necesario para ajustarse al ancho */
+}
+
+.text-res p strong {
+    font-family: 'OpenSans-Bold';
+}
+
+
+
+.wolf {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wolf h1{
+    font-family: 'LeagueSpartan';
+    color: #F4D03F;
+    text-align: center;
+    width: 100%;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .text-res h3 {
+ 
+        padding-top: 0px;
+        
+    }
+}

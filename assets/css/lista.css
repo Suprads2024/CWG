@@ -1,0 +1,353 @@
+/*------------ SECCION DE LISTA------------------ */
+.trading-section {
+  
+    padding: 50px 200px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+}
+
+.trading-section .content {
+    max-width: 450px;
+    position: relative;
+    z-index: 2; /* Ensures the content stays above the background */
+}
+
+/* Heading and Text Styles */
+.trading-section h2 {
+    font-family: 'LeagueSpartan', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.trading-section h2 strong {
+    color: #ffffff;
+}
+
+.trading-section h2 span {
+    color: #f1c40f; /* Yellow color for the highlighted text */
+}
+
+.trading-section .description {
+    font-size: 1.2rem;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* List Styles */
+.trading-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+.trading-list p {
+   
+    font-size: 1rem;
+    font-weight: 300; /* Light font weight for normal text */
+    margin-bottom: 15px;
+    color: #fff; /* White color for normal text */
+}
+.highlight {
+    color: yellow;  /* Cambia el color a amarillo */
+    font-weight: bold;  /* Aplica negrita */
+}
+.trading-list p .icon {
+    width: 20px; /* Size of the check icons */
+    height: auto;
+    margin-right: 10px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+.trading-list p strong {
+    font-weight: 700; /* Bold font weight */
+   
+}
+
+.sub-item {
+    margin-left: 30px; /* Indentation for sub-items */
+}
+
+
+.trading-list .sub-item {
+    margin-left: 30px; /* Indentation for sub-items */
+    font-size: 0.9rem; /* Slightly smaller font size for sub-items */
+}
+
+/* Media Query for Mobile Devices (786px and below) */
+@media (max-width: 786px) {
+    .trading-section {
+        padding: 20px 25px; /* Reduced padding for smaller screens */
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .trading-section .content {
+        max-width: 100%; /* Allow content to fill the screen width */
+    }
+
+    .trading-section h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+        margin-bottom: 15px;
+    }
+
+    .trading-section .description {
+        font-size: 1rem; /* Smaller font size for descriptions */
+    }
+
+    .trading-list p {
+        font-size: 0.9rem; /* Smaller font size for list text */
+        flex-direction: column; /* Stack icon and text vertically if necessary */
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .trading-list p .icon {
+        width: 18px; /* Slightly smaller icon size */
+        margin-bottom: 5px; /* Add space below the icon in case of stacking */
+    }
+
+    .sub-item {
+        margin-left: 15px; /* Reduced indentation for sub-items */
+        font-size: 0.8rem; /* Smaller font size for sub-items */
+    }
+}
+
+/*------------ FIN DE LISTA ------------------ */
+
+
+/*------------ SEGUNDA SECCION DE TARJETAS------------------ */
+
+.shared-background {
+   
+    padding: 0; /* Remove default padding to avoid gaps */
+    margin: 0; /* Remove default margin to avoid gaps */
+}
+
+
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 20px; /* Reduced space between cards */
+    padding: 50px 100px; /* Add padding between the section and the screen edges */
+    
+}
+
+.feature-card {
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    max-width: 80%; /* Ensures the cards don't stretch too wide */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out content evenly */
+    min-height: 250px; /* Set a consistent minimum height for all cards */
+}
+
+/* Heading Styling */
+.feature-card h2 {
+    font-family: 'LeagueSpartan', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    position: absolute;
+    top: -17%; /* Position the h2 below the top of the card */
+    left: 20px;
+    z-index: 1;
+    transform: translateY(90%); /* Shift h2 up by 90% to achieve 10% visibility */
+    margin: 0;
+}
+
+.feature-card h2 strong {
+    color: #f1c40f; /* Yellow color for the bold text */
+}
+
+/* Content Styling */
+.feature-content {
+    background-color: rgba(70, 70, 70, 0.2); /* Fondo oscuro semi-transparente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    padding: 40px;
+    margin-top: 6px;
+    border-radius: 25px;
+    position: relative;
+    z-index: 2;
+    flex: 1; /* Permitir que el contenido crezca y llene el espacio disponible */
+    
+    /* Fondo difuminado */
+    backdrop-filter: blur(2px); /* Aplica el desenfoque al contenido detrás de la tarjeta */
+    -webkit-backdrop-filter: blur(2px); /* Soporte para navegadores WebKit como Safari */
+}
+
+.feature-content p {
+    font-family: 'OpenSans-Regular';
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    line-height: 1.6;
+}
+.feature-content h5{
+    margin-top: -20px;
+}
+.feature-content strong {
+    color: #f1c40f;
+}
+
+/* Button Placeholder Styling */
+.button-placeholder {
+    position: absolute;
+    bottom: 0px; /* Position near the bottom of the card */
+    right: 0px; /* Position near the right edge of the card */
+    text-align: center;
+}
+
+.button-placeholder img {
+    width: 200px; /* Adjust the width to make the button smaller */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+
+}
+.button-placeholder img:hover {
+    content: url('../Botones/CWG_Enviar\ ticket_\ Encendido.png'); /* Change to hover image */
+    
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 786px) {
+    .features-section {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 20px 15px; /* Reduce padding on smaller screens */
+    }
+
+    .feature-card {
+        max-width: 100%; /* Ensure the card takes full width */
+        min-height: 200px; /* Adjust height for mobile */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .feature-card h2 {
+        font-size: 1.8rem; /* Smaller font size for headings */
+        top: -10%; /* Adjust positioning for smaller screens */
+    }
+
+    .feature-content {
+        padding: 20px; /* Adjust padding for mobile screens */
+    }
+    .feature-content h5{
+        margin-top: -5px;
+    }
+    .feature-content p {
+        font-size: 0.9rem; /* Smaller font size for content */
+        line-height: 1.4; /* Adjust line height for better readability on mobile */
+        margin-bottom: 20px;
+    }
+
+    .button-placeholder img {
+    
+        margin-right: 5px;
+        width: 150px; /* Smaller button for mobile */
+    }
+}
+/* Track Record Section */
+.track-record-section {
+    width: 100%;
+    padding: 40px 20px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: center;
+    background-color: transparent; /* Use transparent background */
+}
+
+.track-record-card {
+    grid-column: 1 / -1; /* Hace que el div ocupe toda la fila */
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1150px; /* Maximum width for large screens */
+    background-color: rgba(70, 70, 70, 0.2); /* Semi-transparent dark background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border-radius: 25px; /* Rounded corners */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    /* Background Blur */
+    backdrop-filter: blur(2px); /* Applies the blur to content behind the card */
+    -webkit-backdrop-filter: blur(2px); /* For Safari and other WebKit browsers */
+}
+
+.track-record-content {
+    margin-left: 50px;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the icon and text */
+    color: #fff;
+    font-size: 1.5rem;
+    flex: 1;
+   
+}
+.track-record-content 
+.track-record-icon {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+.track-record-content strong {
+    color: #f1c40f; /* Yellow color for highlighted text */
+}
+.track-record-content p{
+    font-family: 'LeagueSpartan';
+}
+
+.track-record-button {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.track-record-button p {
+    font-family: 'OpenSans-Regular';
+    font-size: 0.8rem;
+    color: #f1c40f; /* Match the color scheme */
+    margin-bottom: 5px;
+}
+
+.track-record-button img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+
+}
+
+.track-record-button img:hover {
+    content: url('../Botones//CWG_Trackrecord_\ Encendido.png'); /* Change to hover image */
+    
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+    .track-record-card {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 20px;
+      
+    }
+    .track-record-content{
+        margin-left: 0px;
+    }
+    .track-record-button{
+        margin-right: 0px;
+    }
+    .track-record-content {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .track-record-button img {
+        width: 160px; /* Smaller button for mobile */
+    }
+}

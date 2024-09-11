@@ -1,0 +1,318 @@
+/* Estilos Generales para la Nueva Sección */
+.section-offer {
+    padding: 60px 80px;
+    margin-bottom: 70px;
+  
+}
+
+.wrapper-offer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px; /* Espacio entre las dos columnas */
+}
+
+.offer-image-container {
+    flex: 1;
+    text-align: left; /* Alinea la imagen a la izquierda */
+}
+
+.offer-image {
+    max-width: 90%; /* Ajusta la imagen a un tamaño ligeramente más pequeño */
+    height: auto;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5)); /* Aplica una sombra sutil */
+}
+
+.offer-text-container {
+    flex: 1;
+    color: #e0e0e0; /* Color de texto en gris claro */
+}
+
+.offer-subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #a3a3a3; /* Gris medio para el subtítulo */
+    margin-bottom: 12px;
+}
+
+.offer-title {
+    font-family: 'LeagueSpartan', sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.offer-title span {
+    color: #ffcc00; /* Amarillo para resaltar "cursos" */
+}
+
+.offer-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.offer-list-item {
+    font-family: 'OpenSans-Regular';
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    color: #c0c0c0; /* Color gris claro para los ítems */
+}
+
+.icon-offer {
+    margin-right: 12px;
+    height: 26px;
+    width: 26px;
+}
+
+.arrow-offer {
+    margin-left: auto;
+    margin-right: 40px;
+ 
+    width: 46px;
+}
+
+.price-tag {
+    margin-right: 60px;
+    color: #ffd700; /* Amarillo dorado para el precio */
+    font-family: 'OpenSans-ExtraBold';
+}
+
+.offer-description {
+    font-family: 'OpenSans-Regular';
+    font-size: 1rem;
+    color: #c0c0c0; /* Gris claro */
+}
+
+.highlight-text {
+    color: #ffd700; /* Amarillo dorado para resaltar "Wolf-Premium" */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .offer-image{
+        margin-left: 20px;
+    }
+    .wrapper-offer {
+        flex-direction: column;
+        
+    }
+
+    .offer-image-container, .offer-text-container {
+        
+        flex: none;
+    }
+
+    .offer-title {
+        font-size: 1.5rem;
+    }
+    
+    .offer-list-item {
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    .icon-offer{
+        height: auto;
+    width: 40px;
+    }
+    .price-tag{
+   margin-left: -30px;
+        font-size: 0.9rem;
+        margin-right: -10px;
+    }
+    .arrow-offer{
+        
+        margin-bottom: 0px;
+    }
+    /* Estilos Generales para la Nueva Sección */
+.section-offer {
+    padding: 0px 50px;
+    margin-bottom: 70px;
+  
+}
+}
+
+@media (max-width: 390px) {
+    .section-offer{
+        margin-bottom: 10px;
+    }
+    .offer-text-container {
+        margin-left: -35px; }
+    
+   
+}
+/* Añadir estilo de hover con zoom */
+.icon-offer {
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.icon-offer:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% */
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    
+    /* En lugar del color sólido, aplicamos un filtro de desenfoque */
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad del fondo negro */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 90px;
+    right: 420px;
+    color: #f1c40f;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 999;
+}
+@media (max-width:500px){
+    .close {
+        position: absolute;
+        top: 90px;
+        right: 50px;
+        color: #f1c40f;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+}
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Estilos para el contenedor del carousel */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .carousel-images img {
+    width: 80%;
+    max-width: 700px;
+    display: block;
+    transition: opacity 0.5s ease-in-out; /* Transición suave entre imágenes */
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #f1c40f;
+    font-size: 30px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    color: #ffffff;
+  }
+  
+  .prev {
+    left: 150px;
+  }
+  
+  .next {
+    right: 150px;
+  }
+
+  @media (max-width:786px){
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      color: #f1c40f;
+      font-size: 30px;
+      padding: 10px;
+      background-color: transparent;
+      border: none;
+    }
+    .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 10px;
+      }
+  }
+  
