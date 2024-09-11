@@ -192,6 +192,7 @@
 }
 .feature-content strong {
     color: #f1c40f;
+    font-family: 'LeagueSpartan';
 }
 
 /* Button Placeholder Styling */
@@ -221,34 +222,54 @@
     }
 
     .feature-card {
-        max-width: 100%; /* Ensure the card takes full width */
-        min-height: 200px; /* Adjust height for mobile */
+        display: flex; /* Flexbox para alinear el contenido */
+        flex-direction: column;
+        justify-content: center; /* Centra el contenido verticalmente */
+        min-height: 250px;
+        max-width: 100%;
         margin-bottom: 20px; /* Space between cards */
+        padding: 20px;
+        position: relative;
+        overflow: hidden; /* Prevent text from overflowing the card */
+        border-radius: 10px; /* Rounded corners */
     }
 
     .feature-card h2 {
-        font-size: 1.8rem; /* Smaller font size for headings */
-        top: -10%; /* Adjust positioning for smaller screens */
+        top: -11%;
+        font-size: 1.8rem; /* Adjust font size */
+        margin-bottom: 10px;
+        text-align: left; /* Align to the left */
     }
 
     .feature-content {
-        padding: 20px; /* Adjust padding for mobile screens */
-    }
-    .feature-content h5{
-        margin-top: -5px;
-    }
-    .feature-content p {
-        font-size: 0.9rem; /* Smaller font size for content */
-        line-height: 1.4; /* Adjust line height for better readability on mobile */
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0px;
+        padding: 30px 20px; /* Adjust padding for mobile screens */
+        position: relative;
+        overflow: hidden; /* Hide any overflowed text */
+        text-align: left; /* Align text to the left */
     }
 
+    .feature-content h5 {
+        font-size: 0.8rem; /* Smaller font size for subheadings */
+        margin-top: 0px;
+    }
+
+    .feature-content p {
+        font-size: 0.9rem; /* Smaller font size for content */
+        line-height: 1.4; /* Adjust line height */
+        
+    }
+
+    /* Button with consistent size */
     .button-placeholder img {
-    
         margin-right: 5px;
         width: 150px; /* Smaller button for mobile */
     }
 }
+
 /* Track Record Section */
 .track-record-section {
     width: 100%;
