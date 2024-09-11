@@ -440,6 +440,9 @@ align-items: center;
   .footer .footer-links li {
       text-align: center;
   }
+  .copyright-text{
+    font-size: 0.8rem;
+}
 }
 @media (max-width:560px){
   
