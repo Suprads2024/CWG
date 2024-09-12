@@ -19,23 +19,23 @@
     <link rel="stylesheet" href="../../assets/css/preguntas.css">
     <link rel="stylesheet" href="../../assets/css/planes.css">
     <link rel="stylesheet" href="../../assets/css/infocard.css">
-<link rel="stylesheet" href="../../assets/css/membership.css">
+    <link rel="stylesheet" href="../../assets/css/membership.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
 </head>
 
 <body class="index-body">
-   <!-- ***** Preloader Start ***** -->
-   <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-  </div>
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -64,40 +64,41 @@
             </div>
         </div>
     </header>
-   <!-- ***** Header Area End ***** -->
-<div class="form-container">
-    <div class="wolf"><h1>Membresía de Wolf-Premium</h1></div>
-    
-    <!-- Iframe container for Google Form -->
-    <iframe id="google-form-iframe" 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfUW-3FgBFLq5ikihumuXN2Aj2gIsAO1DKnpBJvI7gZMei-pg/viewform?embedded=true"
-        width="100%" 
-        height="2400px"
-        frameborder="0"
-        marginheight="0" 
-        marginwidth="0">Cargando…</iframe>
-</div>
+    <!-- ***** Header Area End ***** -->
+    <div class="form-container">
+        <div class="wolf">
+            <h1>Membresía de Wolf-Premium</h1>
+        </div>
+        <iframe id="google-form-iframe"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfUW-3FgBFLq5ikihumuXN2Aj2gIsAO1DKnpBJvI7gZMei-pg/viewform?embedded=true"
+            width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
 
-<script>
-    // Script to detect the form submission
-    document.addEventListener('DOMContentLoaded', function () {
-        const iframe = document.getElementById('google-form-iframe');
-        const originalHeight = 2400; // Save the original height of the iframe
+    <!-- Script para ajustar la altura del iframe después de enviar el formulario -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const iframe = document.getElementById('google-form-iframe');
+            const originalHeight = 1000; // Altura original del iframe
+            let isFormSubmitted = false;
 
-        iframe.onload = function () {
-            // Check if the current iframe content includes the 'formResponse' part in the URL (which happens after form submission)
-            const iframeDocument = iframe.contentWindow.location.href;
+            iframe.onload = function () {
+                const iframeDocument = iframe.contentWindow.location.href;
 
-            if (iframeDocument.includes('formResponse')) {
-                // Shrink the iframe height after form submission
-                iframe.style.height = '400px'; // Adjust this height as needed for the thank you page
-            } else {
-                // Set the height back to the original form size if it's not the form response page
-                iframe.style.height = originalHeight + 'px';
-            }
-        };
-    });
-</script>
+                // Detectar si la URL contiene 'formResponse', lo que indica que el formulario se envió
+                if (iframeDocument.includes('formResponse')) {
+                    // Solo ajustar si no se ha ajustado previamente
+                    if (!isFormSubmitted) {
+                        iframe.style.height = '400px'; // Ajustar esta altura según la página de agradecimiento
+                        isFormSubmitted = true;
+                    }
+                } else {
+                    // Restaurar altura original si el usuario vuelve al formulario
+                    iframe.style.height = originalHeight + 'px';
+                    isFormSubmitted = false;
+                }
+            };
+        });
+    </script>
 
     <footer class="footer">
         <!-- Footer -->
@@ -105,18 +106,23 @@
             <div class="footer-block">
                 <p>Enterate antes que nadie</p>
                 <div class="social-icons">
-                    <a href="https://discord.com/invite/CXEwf86rtQ" target="_blank"><img src="../../assets/Iconos/Iconos redes/discord.svg" alt="Icono 1"></a>
-                    <a href="https://www.instagram.com/cryptowolfgroup" target="_blank"><img src="../../assets/Iconos/Iconos redes/instagram.svg" alt="Icono 2"></a>
-                    <a href="https://t.me/CryptoWolfGroup" target="_blank"><img src="../../assets/Iconos/Iconos redes/telegram.svg" alt="Icono 3"></a>
-                    <a href="https://x.com/CryptoWolfGroup" target="_blank"><img src="../../assets/Iconos/Iconos redes/x.svg" alt="Icono 4"></a>
+                    <a href="https://discord.com/invite/CXEwf86rtQ" target="_blank"><img
+                            src="../../assets/Iconos/Iconos redes/discord.svg" alt="Icono 1"></a>
+                    <a href="https://www.instagram.com/cryptowolfgroup" target="_blank"><img
+                            src="../../assets/Iconos/Iconos redes/instagram.svg" alt="Icono 2"></a>
+                    <a href="https://t.me/CryptoWolfGroup" target="_blank"><img
+                            src="../../assets/Iconos/Iconos redes/telegram.svg" alt="Icono 3"></a>
+                    <a href="https://x.com/CryptoWolfGroup" target="_blank"><img
+                            src="../../assets/Iconos/Iconos redes/x.svg" alt="Icono 4"></a>
                 </div>
             </div>
             <div class="footer-block">
-               <a href="../../index.html"> <img src="../../assets/Logo/CWG-Logo.png" alt="Logo de la página" class="footer-logo"></a>
+                <a href="../../index.html"> <img src="../../assets/Logo/CWG-Logo.png" alt="Logo de la página"
+                        class="footer-logo"></a>
             </div>
             <div class="footer-block">
                 <ul class="footer-links">
-                   
+
                     <li><a href="../../terms-and-conditions/">Términos y condiciones</a></li>
                     <li><a href="../../terms-of-service/">Términos de servicio</a></li>
                     <li><a href="../../privacy-policy/">Política de privacidad</a></li>
@@ -125,9 +131,10 @@
         </nav>
         <div class="footer-bottom">
             <p class="copyright-text">
-                <span style="color: #ffffff;">©</span> Crypto Wolf Group<span style="color: #ffffff;">™</span> - Todos los derechos reservados
-              </p>
-              
+                <span style="color: #ffffff;">©</span> Crypto Wolf Group<span style="color: #ffffff;">™</span> - Todos
+                los derechos reservados
+            </p>
+
         </div>
     </footer>
     <!-- Scripts importantes-->
