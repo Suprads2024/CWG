@@ -58,9 +58,8 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-
-    iframe{
-        height:3000px;
+    iframe {
+        height: 3000px;
     }
     .form-container {
         margin-top: 150px; 
@@ -76,6 +75,7 @@
         padding: 0 15px;
     }
 }
+
 
 .text-res {
     margin-bottom: 20px;

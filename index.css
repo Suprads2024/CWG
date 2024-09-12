@@ -999,6 +999,13 @@ p {
 @media (min-width: 1200px) {
     .background-text p {
         font-size: 6vw;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 786px) {
+    .background-text p {
+        
+      margin-top: -5px;
     }
 }
 
