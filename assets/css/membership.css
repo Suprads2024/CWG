@@ -58,9 +58,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    iframe {
-        height: 3000px;
-    }
+  
     .form-container {
         margin-top: 150px; 
         padding: 0 30px;

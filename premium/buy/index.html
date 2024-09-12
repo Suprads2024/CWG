@@ -74,31 +74,7 @@
             width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
     </div>
 
-    <!-- Script para ajustar la altura del iframe después de enviar el formulario -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const iframe = document.getElementById('google-form-iframe');
-            const originalHeight = 1000; // Altura original del iframe
-            let isFormSubmitted = false;
-
-            iframe.onload = function () {
-                const iframeDocument = iframe.contentWindow.location.href;
-
-                // Detectar si la URL contiene 'formResponse', lo que indica que el formulario se envió
-                if (iframeDocument.includes('formResponse')) {
-                    // Solo ajustar si no se ha ajustado previamente
-                    if (!isFormSubmitted) {
-                        iframe.style.height = '400px'; // Ajustar esta altura según la página de agradecimiento
-                        isFormSubmitted = true;
-                    }
-                } else {
-                    // Restaurar altura original si el usuario vuelve al formulario
-                    iframe.style.height = originalHeight + 'px';
-                    isFormSubmitted = false;
-                }
-            };
-        });
-    </script>
+  
 
     <footer class="footer">
         <!-- Footer -->
