@@ -1030,17 +1030,16 @@ p {
 }
 
 .contact-form {
-    padding-top: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 13%; /* 10% + 3% del margen superior */
+    padding-left: 8%; /* 5% + 3% del margen lateral */
+    padding-right: 8%; /* 5% + 3% del margen lateral */
+    padding-bottom: 3%; /* Añadimos 3% para el margen inferior */
     border-radius: 50px;
-   
     font-family: 'OpenSans-ExtraBold', sans-serif;
     color: #ffffff;
     text-align: left;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    /* Alinea el texto a la izquierda */
 }
 
 .contact-form p {
