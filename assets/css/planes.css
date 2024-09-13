@@ -160,7 +160,8 @@
 }
 
 .button-link:hover .subscribe-img {
-    opacity: 0.5;
+
+    content: url('../Botones/Home/CWG_Suscribirse_\ Encendido.png');
 }
 
 @media (max-width:512px){

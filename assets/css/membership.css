@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    max-width: 1200px; /* Ancho máximo del contenedor */
+    max-width: 600px; /* Ancho máximo del contenedor */
     margin-left: auto;
     margin-right: auto;
 }
@@ -49,14 +49,14 @@
 .iframe-container iframe {
     width: 100%;
     border: none;
-    height: 1000px;
+    height: 600px;
 }
 
 
 /* Ajustes para tabletas y pantallas medianas */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media  (max-width: 786px) {
     .iframe-container iframe {
-        height: 1500px; /* Ajusta el tamaño para tabletas */
+        height: 1000px; /* Ajusta el tamaño para tabletas */
         width: 90%; /* Aumentar el ancho para tabletas */
     }
 }
@@ -71,7 +71,7 @@
     
     
     .iframe-container iframe {
-        height: 2400px; /* Ajusta el tamaño del iframe para móviles */
+         /* Ajusta el tamaño del iframe para móviles */
         width: 100vw; /* Asegura que ocupe todo el ancho de la pantalla en móviles */
         max-width: 100%;
     }
