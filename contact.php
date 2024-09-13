@@ -44,7 +44,7 @@ HTML;
 // Configuración de PHPMailer
 $mailer = new PHPMailer();
 $mailer->setFrom($email, $nombre);
-$mailer->addAddress('ignaciosoraka@gmail.com', 'Sitio web');
+$mailer->addAddress('info@cryptowolfgroup.com', 'Sitio web');
 $mailer->Subject = "Mensaje de $nombre desde la web";
 $mailer->msgHTML($body);
 $mailer->AltBody = strip_tags($body);
@@ -54,7 +54,7 @@ $mailer->CharSet = 'UTF-8';
 $rta = $mailer->send();
 
 if ($rta) {
-    header("Location: gracias.html");
+    header("Location: index.html");
 } else {
     echo "Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.";
 }
