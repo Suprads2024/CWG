@@ -29,11 +29,13 @@
 }
 
 .info-card-content {
+    margin-left:40px;
     display: flex;
     align-items: center;
     gap: 10px; /* Espacio entre icono y texto */
     color: #fff;
     font-size: 1rem;
+    
 }
 
 .info-card-icon {
@@ -70,6 +72,7 @@
     .info-card-content {
         flex-direction: column; /* Disposición vertical del contenido en pantallas pequeñas */
         text-align: center;
+        margin-left:0px;
     }
 
     .info-card-icon {

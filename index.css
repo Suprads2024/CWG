@@ -1102,7 +1102,52 @@ p strong {
 
 /*--------PARTE DE TU FORMACION Y DE LOS LIBROS--------*/
 
+/* Efecto de hover para cambiar la imagen de fondo */
 
+/* Estilo inicial para la imagen */
+/* Imagen normal */
+.hover-image2 {
+ 
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Precarga la imagen de hover y define el hover */
+.hover-image2:hover {
+    content: url('../assets/Boton/2 (1)4.png'); /* Cambia a la imagen de hover */
+}
+
+
+
+
+/* Ocultar en pantallas grandes */
+.discord-mobile-button {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.discord-mobile-button img {
+    width: 90%;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    /* Ajusta el tamaño según sea necesario */
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.discord-mobile-button img:hover {
+    transform: scale(1.1);
+    /* Efecto de hover para agrandar un poco */
+}
+
+/* Mostrar solo en pantallas móviles */
+@media (max-width: 768px) {
+    .discord-mobile-button {
+        display: block;
+    }
+}
 
 .for-background {
 

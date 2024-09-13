@@ -317,7 +317,6 @@
                     <p>Ofrecemos secciones exclusivas, dentro de nuestra Comunidad Pública, para el estudio del mercado,
                         incluyendo criptomonedas y la bolsa de valores.</p>
                 </div>
-
                 <div class="imagenes">
                     <div class="fila">
                         <img src="./assets/Boton/Home Tu formacion- Analisis tecnico - Fondo.png"
@@ -332,12 +331,15 @@
                             alt="Master the Markets">
                         <img src="./assets/Boton/Home Tu formacion- El inversor inteligente - Fondo.png"
                             alt="El inversor inteligente">
-                        <img class="hover-image2" src="./assets/Boton/1 (2)4.png" alt="Únete a Discord"
-                            onclick="window.open('https://discord.com/invite/EE5N7VS4tp', '_blank')"
-                            style="cursor: pointer; margin-top: -10px;">
+                            <img class="hover-image2" src="./assets/Boton/1 (2)4.png" alt="Únete a Discord"
+                            onclick="window.open('https://discord.com/invite/EE5N7VS4tp', '_blank')">
                     </div>
                 </div>
-
+                <script>
+                    // Precargar la imagen de hover
+                    const hoverImg = new Image();
+                    hoverImg.src = './assets/Boton/2 (1)4.png';
+                </script>
                 <!-- Botón de unirte a Discord para móvil -->
                 <div class="discord-mobile-button">
                    <a href="https://discord.com/invite/EE5N7VS4tp"> <img src="./assets/Botones/Home/CWG_Unirse a discord_ Apagado.png" alt="Únete a Discord""
@@ -351,55 +353,7 @@
             </div>
         </section>
 
-        <style>
-            /* Efecto de hover para cambiar la imagen de fondo */
-
-
-            .hover-image2:hover {
-
-                content: url('./assets/Boton/2\ \(1\)4.png');
-                /* Ruta de la nueva imagen */
-
-            }
-
-            .hover-image2:hover .normal-image {
-                opacity: 0;
-                /* Oculta la imagen normal al pasar el mouse */
-            }
-
-            .hover-image2:hover .hover-image {
-                opacity: 1;
-                /* Muestra la imagen "encendida" al pasar el mouse */
-            }
-
-            /* Ocultar en pantallas grandes */
-            .discord-mobile-button {
-                display: none;
-                text-align: center;
-                margin-top: 20px;
-            }
-
-            .discord-mobile-button img {
-                width: 90%;
-                margin-top: -40px;
-                margin-bottom: 40px;
-                /* Ajusta el tamaño según sea necesario */
-                max-width: 200px;
-                transition: transform 0.3s ease;
-            }
-
-            .discord-mobile-button img:hover {
-                transform: scale(1.1);
-                /* Efecto de hover para agrandar un poco */
-            }
-
-            /* Mostrar solo en pantallas móviles */
-            @media (max-width: 768px) {
-                .discord-mobile-button {
-                    display: block;
-                }
-            }
-        </style>
+      
     </main>
     <section class="help-contact-section">
         <div class="help-banner">
