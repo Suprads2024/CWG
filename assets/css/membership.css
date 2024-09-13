@@ -65,8 +65,8 @@
 @media (max-width: 767px) {
     .form-container {
        
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
     
     
@@ -140,7 +140,8 @@
         font-family: 'LeagueSpartan';
         color: #F4D03F;
         text-align: center;
-        width: 60%;
+        width: 80%;
+        font-size: 1.8rem;
     }
     .text-res h3 {
  
