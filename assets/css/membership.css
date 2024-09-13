@@ -35,16 +35,46 @@
     margin-right: auto;
 }
 
-/* Estilos para el iframe */
+
+
+
+
+
+/* Estilos generales */
 .iframe-container {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .iframe-container iframe {
     width: 100%;
-    height: 1400px; /* Ajusta la altura para que el formulario ocupe el largo necesario */
     border: none;
+    height: 1000px;
+}
+
+
+/* Ajustes para tabletas y pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .iframe-container iframe {
+        height: 1500px; /* Ajusta el tamaño para tabletas */
+        width: 90%; /* Aumentar el ancho para tabletas */
+    }
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 767px) {
+    .form-container {
+       
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    
+    .iframe-container iframe {
+        height: 2400px; /* Ajusta el tamaño del iframe para móviles */
+        width: 100vw; /* Asegura que ocupe todo el ancho de la pantalla en móviles */
+        max-width: 100%;
+    }
 }
 
 /* Estilos de botones y texto en blanco */
@@ -54,39 +84,6 @@
 
 .nav a:hover, .menu-trigger span:hover {
     color: #ccc; /* Color cuando se hace hover */
-}
-
-/* Ajustes específicos para móviles */
-@media (max-width: 768px) {
-    .form-container {
-        margin-top: 150px;
-        padding: 0 30px;
-    }
-
-    .iframe-container {
-        width: 100% !important;
-        overflow-x: hidden !important; /* Forzar a ocultar el scroll horizontal en el contenedor del iframe */
-        display: flex;
-        justify-content: center;
-    }
-
-    .iframe-container iframe {
-        width: 100vw !important; /* Asegura que el iframe ocupe todo el ancho de la ventana */
-        max-width: 100% !important; /* Limitar el ancho máximo para evitar desbordamiento */
-        overflow: hidden !important; /* Evita que el iframe tenga su propio scroll */
-        border: none !important; /* Quitar bordes */
-    }
-
-    iframe {
-        display: block;
-        max-width: 100% !important; /* Limitar el ancho */
-        width: 100% !important; /* Asegura que no haya desbordamiento horizontal */
-        border: none !important;
-    }
-
-    .text-res {
-        padding: 0 15px;
-    }
 }
 .text-res {
     margin-bottom: 20px;
@@ -139,6 +136,12 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
 
+    .wolf h1{
+        font-family: 'LeagueSpartan';
+        color: #F4D03F;
+        text-align: center;
+        width: 60%;
+    }
     .text-res h3 {
  
         padding-top: 0px;
