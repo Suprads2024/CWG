@@ -350,7 +350,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 786px) {
+@media (max-width: 560px) {
     .track-record-card {
         flex-direction: column;
         align-items: flex-end;
