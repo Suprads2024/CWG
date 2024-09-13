@@ -144,6 +144,7 @@
     margin-top: 30px;
 }
 
+
 .button-link {
     text-decoration: none;
     margin-right: -10px;
@@ -155,12 +156,13 @@
     margin-bottom: -15px;
     margin-right: -47px;
     height: auto;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease-in-out;
 }
+
 .button-link:hover .subscribe-img {
-    opacity: 0.8;
-    content: url('../Botones/Home/CWG_Suscribirse_\ Encendido.png');
+    opacity: 0.5;
 }
+
 @media (max-width:512px){
     .card {
         
