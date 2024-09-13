@@ -44,6 +44,8 @@ body{
 .index-body {
 
     background-image: url('assets/Home/Home\ -\ Fondo\ entero\ .jpg');
+  
+    background-repeat: no-repeat;
 
 
     margin: 0;
