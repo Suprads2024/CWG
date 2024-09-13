@@ -1115,7 +1115,7 @@ p strong {
 
 /* Precarga la imagen de hover y define el hover */
 .hover-image2:hover {
-    content: url('../assets/Boton/2 (1)4.png'); /* Cambia a la imagen de hover */
+    content: url('./assets/Boton/2 (1)4.png'); /* Cambia a la imagen de hover */
 }
 
 
