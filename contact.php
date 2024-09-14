@@ -1,13 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header("Location: index.html");
-    exit;
-}
-
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/Exception.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
+$destinatario = 'info@cryptowolfgroup.com';
 
 // Clave secreta de reCAPTCHA
 $secretkey = "6Ld_1CcqAAAAALO__drQlTnNzyVmo5kr7qZ3PUer";
@@ -26,36 +18,37 @@ if (!$atributos['success']) {
     exit;
 }
 
-// Envios
-$nombre = htmlspecialchars(trim($_POST['nombre']));
-$email = htmlspecialchars(trim($_POST['email']));
-$mensaje = htmlspecialchars(trim($_POST['mensaje']));
+// Capturamos los datos enviados desde el formulario
+$nombre = $_POST['nombre'];
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$mensaje = $_POST['mensaje'];
 
-if (empty(trim($nombre))) $nombre = 'Anónimo';
+// Construimos el mensaje del correo
+$mensajeCorreo = "Mensaje de contacto:\n\n";
+$mensajeCorreo .= "Nombre: " . $nombre . "\n";
+$mensajeCorreo .= "Correo Electrónico: " . $email . "\n";
+$mensajeCorreo .= "Mensaje: " . $mensaje . "\n";
 
-// Cuerpo del mensaje
-$body = <<<HTML
-    <h2>Contacto desde la web</h2>
-    <p>De: $nombre <br> Email: $email</p>
-    <h3>Mensaje</h3>
-    <p>$mensaje</p>
-HTML;
+// Asunto del correo
+$asuntoCorreo = "Consulta de " . $nombre;
 
-// Configuración de PHPMailer
-$mailer = new PHPMailer();
-$mailer->setFrom($email, $nombre);
-$mailer->addAddress('info@cryptowolfgroup.com', 'Sitio web');
-$mailer->Subject = "Mensaje de $nombre desde la web";
-$mailer->msgHTML($body);
-$mailer->AltBody = strip_tags($body);
-$mailer->CharSet = 'UTF-8';
+// Cabeceras del correo
+$from = "info@cryptowolfgroup.com"; // Usa un correo real asociado a tu dominio
+$header = "From: Crypto Wolf Group<" . $from . ">\r\n";
+$header .= "Reply-To: " . $email . "\r\n";
+$header .= "MIME-Version: 1.0\r\n";
+$header .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+$header .= "X-Priority: 1\r\n"; // Opcional
 
-// Envía el correo
-$rta = $mailer->send();
-
-if ($rta) {
-    header("Location: index.html");
+// Enviamos el correo y manejamos la respuesta
+if(mail($destinatario, $asuntoCorreo, $mensajeCorreo, $header)){
+    // Redirecciona inmediatamente a la página de agradecimiento
+    header("Location: gracias/");
+    exit;
 } else {
-    echo "Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.";
+    ?>
+    <h3 class="error">Ocurrió un error, vuelve a intentarlo</h3>
+    <?php
 }
 ?>

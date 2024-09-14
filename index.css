@@ -59,6 +59,24 @@ body{
     overflow-x: hidden;
     /* Evita el scroll horizontal si la imagen es más grande que la pantalla */
 }
+.index-body2 {
+
+    background-image: url('assets/images/Wolf\ Premium\ -\ 1\ Fondo\ Crypto\ wolf.jpg');
+  
+    background-repeat: no-repeat;
+
+
+    margin: 0;
+    /* Elimina cualquier margen predeterminado */
+    padding: 0;
+    /* Elimina cualquier padding predeterminado */
+
+    width: 100%;
+    /* Asegura que el body ocupe todo el ancho de la ventana */
+
+    overflow-x: hidden;
+    /* Evita el scroll horizontal si la imagen es más grande que la pantalla */
+}
 
 p {
     font-size: 15px;
@@ -1500,6 +1518,11 @@ p strong {
         flex-direction: column; /* Cambia la disposición a columna */
         justify-content: center;
         align-items: center;
+    }
+}
+@media (min-width: 1700px) {
+    .footer {
+        margin-top: -150px;
     }
 }
 .footer .footer-links a {
