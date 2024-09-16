@@ -1,5 +1,5 @@
 <?php
-$destinatario = 'info@cryptowolfgroup.com';
+$destinatario = 'valen.soraka@icloud.com';
 
 // Clave secreta de reCAPTCHA
 $secretkey = "6Ld_1CcqAAAAALO__drQlTnNzyVmo5kr7qZ3PUer";
@@ -33,7 +33,7 @@ $mensajeCorreo .= "Mensaje: " . $mensaje . "\n";
 $asuntoCorreo = "Consulta de " . $nombre;
 
 // Cabeceras del correo
-$from = "info@cryptowolfgroup.com"; // Usa un correo real asociado a tu dominio
+$from = "valen.soraka@icloud.com"; // Usa un correo real asociado a tu dominio
 $header = "From: Crypto Wolf Group<" . $from . ">\r\n";
 $header .= "Reply-To: " . $email . "\r\n";
 $header .= "MIME-Version: 1.0\r\n";
