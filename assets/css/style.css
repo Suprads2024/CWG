@@ -109,7 +109,7 @@ Global Styles
 @media (max-width:786px){
   .main-banner h1 {
     
-    font-size: 30px;
+    font-size: 35px;
     
     
   }
@@ -726,8 +726,8 @@ Banner Style
   font-family: 'OpenSans-Regular', sans-serif;
   color: #FFFFFF;
   margin-top: 10px;
-  margin-left: 55px;
-  margin-right: 55px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 /*----- Referidos----*/
